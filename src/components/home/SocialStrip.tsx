@@ -14,7 +14,7 @@ export function SocialStrip() {
     <section className="px-6 py-24 text-center md:px-12 md:py-32">
       <p className="editorial-eyebrow">Stay Connected</p>
       <h2 className="serif-display-roman mt-6 text-4xl md:text-6xl">
-        Follow along <em>@picturebyparth</em>
+        Follow along <em>@parthphotography1</em>
       </h2>
       <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-charcoal-soft">
         New work, behind-the-scenes moments, and the occasional sneak peek —

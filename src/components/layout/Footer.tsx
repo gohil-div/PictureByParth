@@ -8,12 +8,12 @@ export function Footer() {
           </p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-charcoal-soft">
             A fine art wedding & portrait photography studio, capturing stories
-            across Tuscany, the Amalfi Coast, the Cotswolds and beyond.
+            across Rajkot, the Amalfi Coast, the Cotswolds and beyond.
           </p>
         </div>
         <div className="flex gap-10 text-[0.7rem] uppercase tracking-[0.32em] text-charcoal-soft">
           <a
-            href="https://instagram.com/picturebyparth"
+            href="https://instagram.com/parthphotography1"
             target="_blank"
             rel="noreferrer"
             className="link-underline hover:text-charcoal"
@@ -29,7 +29,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mt-20 text-center text-[0.65rem] uppercase tracking-[0.32em] text-charcoal-soft">
-        © {new Date().getFullYear()} Picture by Parth · Est. MMXII
+        © {new Date().getFullYear()} Picture by Parth
       </p>
     </footer>
   );

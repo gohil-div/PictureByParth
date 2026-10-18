@@ -6,6 +6,7 @@ import bride1 from "@/assets/bride-1.jpg";
 import dance from "@/assets/dance.jpg";
 import ceremony from "@/assets/ceremony.jpg";
 import bouquet from "@/assets/bouquet.jpg";
+import Aboutparth from "@/assets/Parth.webp";
 
 export const images = {
   hero1,
@@ -16,6 +17,7 @@ export const images = {
   dance,
   ceremony,
   bouquet,
+  Aboutparth,
 };
 
 export type StoryBlock =
