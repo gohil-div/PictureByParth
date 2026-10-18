@@ -105,13 +105,13 @@ export function ContactDetails() {
             <p>
               WhatsApp:{" "}
               <a
-                href="https://wa.me/000000000"
+                href="https://wa.me/9574559914"
                 className="link-underline text-charcoal"
               >
                 Message the Studio
               </a>
             </p>
-            <p>Studio: Florence, Italy</p>
+            <p>Studio: Rajkot, India</p>
           </div>
         </Reveal>
       </div>

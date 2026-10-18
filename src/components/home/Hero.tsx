@@ -17,9 +17,7 @@ export function Hero() {
 
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-16 md:px-12 md:pb-20">
         <div className="animate-reveal-fade" style={{ animationDelay: "0.3s" }}>
-          <p className="editorial-eyebrow !text-gold-soft">
-            Picture by Parth · Est. MMXII
-          </p>
+          <p className="editorial-eyebrow !text-gold-soft">Picture by Parth</p>
         </div>
 
         <h1
@@ -41,7 +39,7 @@ export function Hero() {
             <span className="h-px w-8 bg-current transition-all duration-700 group-hover:w-14" />
           </Link>
           <p className="text-[0.65rem] uppercase tracking-[0.32em] text-ivory/70">
-            Based in Florence · Available Worldwide
+            Based in Rajkot · Available across India
           </p>
         </div>
       </div>

@@ -8,7 +8,7 @@ export function IntroAbout() {
       <Reveal className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:items-center md:gap-20">
         <div className="hover-zoom aspect-[4/5] w-full">
           <img
-            src={images.hero2}
+            src={images.Aboutparth}
             alt="The photographer at work during a Tuscan wedding"
             className="h-full w-full object-cover"
             loading="lazy"
@@ -20,12 +20,12 @@ export function IntroAbout() {
             A photographer, <em>not</em> a vendor.
           </h2>
           <p className="mt-8 max-w-md text-sm leading-relaxed text-charcoal-soft">
-            Fifteen years behind the camera taught me one thing: the best
-            wedding photographs happen when nobody's posing. I shoot quietly,
-            move slowly, and spend the day watching for the moments you'd want
-            to remember even without a photograph.
+           I believe in doing everything with passion and love, even when life makes it hard to find them. Sometimes, all we need is time, faith, and a little reminder of our purpose.
           </p>
-          <p className="signature-mark mt-6 text-charcoal">Parth</p>
+           <p className="mt-8 max-w-md text-sm leading-relaxed text-charcoal-soft">
+           For me, that reminder often comes from behind the camera. Letting the light in, going with the flow, and capturing moments brings back the spark I need for new beginnings. And sometimes, the best subject is myself. Little portraits, big feelings. Haha!
+          </p>
+          {/* <p className="signature-mark mt-6 text-charcoal">Parth</p> */}
           <Link
             to="/about"
             className="mt-6 inline-block text-[0.7rem] uppercase tracking-[0.32em] text-charcoal link-underline"

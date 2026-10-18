@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { fallbackInstagramFeed } from "./lib/instagram";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -39,6 +40,58 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const url = new URL(request.url);
+
+    if (url.pathname === "/api/instagram") {
+      const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
+      const accountId = process.env.INSTAGRAM_ACCOUNT_ID;
+
+      const fallbackResponse = new Response(
+        JSON.stringify({ photos: fallbackInstagramFeed }),
+        {
+          status: 200,
+          headers: { "content-type": "application/json; charset=utf-8" },
+        },
+      );
+
+      if (!accessToken || !accountId) {
+        return fallbackResponse;
+      }
+
+      try {
+        const graphUrl = new URL(`https://graph.facebook.com/v20.0/${accountId}/media`);
+        graphUrl.searchParams.set("fields", "id,media_url,permalink,caption");
+        graphUrl.searchParams.set("access_token", accessToken);
+
+        const upstream = await fetch(graphUrl.toString(), {
+          headers: { Accept: "application/json" },
+        });
+
+        if (!upstream.ok) {
+          return fallbackResponse;
+        }
+
+        const payload = await upstream.json();
+        const photos = Array.isArray(payload?.data)
+          ? payload.data
+              .filter((item: any) => item?.media_url)
+              .slice(0, 6)
+              .map((item: any) => ({
+                src: item.media_url,
+                href: item.permalink || "https://www.instagram.com/parthphotography1/",
+                alt: item.caption || "Instagram post by @parthphotography1",
+              }))
+          : fallbackInstagramFeed;
+
+        return new Response(JSON.stringify({ photos }), {
+          status: 200,
+          headers: { "content-type": "application/json; charset=utf-8" },
+        });
+      } catch {
+        return fallbackResponse;
+      }
+    }
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

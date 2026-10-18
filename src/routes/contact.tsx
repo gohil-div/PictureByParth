@@ -22,7 +22,7 @@ function ContactPage() {
     <MarketingLayout>
       <ContactHero />
       <ContactDetails />
-      <ContactFAQ />
+      {/* <ContactFAQ /> */}
       <ContactCTA />
     </MarketingLayout>
   );

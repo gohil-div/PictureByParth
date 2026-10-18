@@ -20,18 +20,18 @@ export function FinalCTA() {
           message — we'll write back the same day.
         </p>
         <div className="mt-14 flex flex-col items-center gap-5 sm:flex-row">
-          <a
+          {/* <a
             href="mailto:hello@picturebyparth.com"
             className="group inline-flex items-center gap-5 border border-ivory/40 bg-ivory/5 px-9 py-5 text-[0.7rem] uppercase tracking-[0.32em] text-ivory backdrop-blur-sm transition-all duration-700 hover:border-ivory hover:bg-ivory hover:text-charcoal"
           >
             <span>Book a Consultation</span>
             <span className="h-px w-10 bg-current transition-all duration-700 group-hover:w-16" />
-          </a>
+          </a> */}
           <a
-            href="https://wa.me/000000000"
+            href="https://wa.me/9574559914"
             className="text-[0.7rem] uppercase tracking-[0.32em] text-ivory link-underline"
           >
-            WhatsApp the Studio
+            Catch me on WhatsApp
           </a>
         </div>
       </div>

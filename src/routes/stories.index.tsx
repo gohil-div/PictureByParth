@@ -22,7 +22,7 @@ function StoriesPage() {
     <MarketingLayout>
       <StoriesHero />
       <StoriesGrid />
-      <StoriesTestimonials />
+      {/* <StoriesTestimonials /> */}
       <StoriesCTA />
     </MarketingLayout>
   );
